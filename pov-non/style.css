@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0e1117;
+    --surface: #161b22;
+    --text: #e6edf3;
+    --muted: #9da7b3;
+    --yes: #2ea043;
+    --no: #f85149;
+    --radius: 14px;
+    --transition: 0.3s ease;
+}
+
+/* BASE */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* HEADER */
+.article-header {
+    margin-bottom: 50px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.badge.yes {
+    background-color: rgba(46, 160, 67, 0.15);
+    color: var(--yes);
+}
+
+.badge.no {
+    background-color: rgba(248, 81, 73, 0.15);
+    color: var(--no);
+}
+
+.article-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.article-header p {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+/* ARTICLE */
+.article {
+    background-color: var(--surface);
+    padding: 40px;
+    border-radius: var(--radius);
+    animation: fadeIn 0.6s ease;
+}
+
+.article h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.article p {
+    margin-bottom: 20px;
+    color: var(--muted);
+}
+
+/* HIGHLIGHT */
+.highlight {
+    border-left: 4px solid;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+.highlight.yes {
+    border-color: var(--yes);
+}
+
+.highlight.no {
+    border-color: var(--no);
+}
+
+/* NAV */
+.navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    background-color: #1f2630;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.navigation a:hover {
+    background-color: #2a3441;
+    transform: translateY(-3px);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    
